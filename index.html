@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="BifrostUMI bridges robot-free human demonstrations and humanoid whole-body manipulation with portable VR-UMI data collection, sparse keypoint retargeting, and whole-body control.">
-  <meta name="keywords" content="BifrostUMI, Humanoid Robot, Robot-Free Data Collection, Whole-Body Manipulation">
+        content="HumanoidUMI bridges robot-free human demonstrations and humanoid whole-body manipulation with portable VR-UMI data collection, sparse keypoint retargeting, and whole-body control.">
+  <meta name="keywords" content="HumanoidUMI, Humanoid Robot, Robot-Free Data Collection, Whole-Body Manipulation">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>BifrostUMI</title>
+  <title>HumanoidUMI</title>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-B34V641Z6X"></script>
@@ -55,9 +55,7 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">
-            <span class="publication-title-line">BifrostUMI: Bridging Robot-Free Demonstrations <br>
-                                                  and Humanoid Whole-Body Manipulation
-            </span>
+            <span class="publication-title-line">HumanoidUMI</span>
           </h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
@@ -85,7 +83,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2605.03452" class="external-link button is-normal is-rounded is-dark" title="View pdf">
+                <a href="https://arxiv.org/pdf/2606.27239" class="external-link button is-normal is-rounded is-dark" title="View pdf">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
@@ -93,7 +91,7 @@
                 </a>
               </span>
               <span class="link-block">
-                 <a href="https://arxiv.org/abs/2605.03452" class="external-link button is-normal is-rounded is-dark" title="View on arXiv">
+                 <a href="https://arxiv.org/abs/2606.27239" class="external-link button is-normal is-rounded is-dark" title="View on arXiv">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
@@ -194,13 +192,13 @@
         <h2 class="title is-3">A Robot-Free Bridge to Humanoid Whole-Body Skills</h2>
         <div class="content has-text-justified">
           <p>
-            BifrostUMI provides a robot-free data collection and learning framework for humanoid whole-body skills. Human demonstrations are collected with portable VR-UMI devices and represented as sparse task-relevant spatial keypoints. A high-level policy predicts future keypoint motions and gripper actions, Spatial Keypoint Retargeting converts them into feasible humanoid whole-body references, and a low-level whole-body controller executes the motion with balance and stability.
+            HumanoidUMI provides a robot-free data collection and learning framework for humanoid whole-body skills. Human demonstrations are collected with portable VR-UMI devices and represented as sparse task-relevant spatial keypoints. A high-level policy predicts future keypoint motions and gripper actions, Spatial Keypoint Retargeting converts them into feasible humanoid whole-body references, and a low-level whole-body controller executes the motion with balance and stability.
           </p>
           <img src="./static/images/HumanoidUMI.png"
                 alt="HumanoidUMI overview"
                 class="media-frame">
           <p class="figure-caption">
-            Overview of the full BifrostUMI pipeline, from robot-free human demonstration capture to deployable humanoid whole-body execution.
+            Overview of the full HumanoidUMI pipeline, from robot-free human demonstration capture to deployable humanoid whole-body execution.
           </p>
         </div>
       </div>
@@ -213,7 +211,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            High-quality data collection is a fundamental cornerstone for training humanoid whole-body visuomotor policies. Current data acquisition paradigms predominantly rely on robot teleoperation, which is often hindered by limited hardware accessibility and low operational efficiency. Inspired by the Universal Manipulation Interface (UMI), we propose BifrostUMI, a portable, efficient, and robot-free data collection framework tailored for humanoid robots. BifrostUMI leverages lightweight VR devices to capture human demonstrations as sparse keypoint trajectories while simultaneously recording wrist-mounted visual data. These multimodal data are subsequently utilized to train a high-level policy network that predicts future keypoint trajectories conditioned on the captured visual features. Through a robust keypoint retargeting pipeline, keypoint trajectories are precisely mapped onto the robot's morphology and executed via a whole-body controller. This approach enables the seamless transfer of diverse and agile behaviors from natural human demonstrations to humanoid embodiments. We demonstrate the efficacy and versatility of the proposed framework across five real-world scenarios.
+            High-quality data collection is a fundamental cornerstone for training humanoid whole-body visuomotor policies. Current data acquisition paradigms predominantly rely on robot teleoperation, which is often hindered by limited hardware accessibility and low operational efficiency. Inspired by the Universal Manipulation Interface (UMI), we propose HumanoidUMI, a portable, efficient, and robot-free data collection framework tailored for humanoid robots. HumanoidUMI leverages lightweight VR devices to capture human demonstrations as sparse keypoint trajectories while simultaneously recording wrist-mounted visual data. These multimodal data are subsequently utilized to train a high-level policy network that predicts future keypoint trajectories conditioned on the captured visual features. Through a robust keypoint retargeting pipeline, keypoint trajectories are precisely mapped onto the robot's morphology and executed via a whole-body controller. This approach enables the seamless transfer of diverse and agile behaviors from natural human demonstrations to humanoid embodiments. We demonstrate the efficacy and versatility of the proposed framework across five real-world scenarios.
           </p>
         </div>
       </div>
@@ -276,7 +274,7 @@
       <div class="content is-medium">
 
         <p>
-          BifrostUMI formulates humanoid visuomotor control as a <strong>three-stage hierarchy</strong>:
+          HumanoidUMI formulates humanoid visuomotor control as a <strong>three-stage hierarchy</strong>:
         </p>
 
         <ol>
@@ -422,7 +420,7 @@
 
       <div class="content is-medium">
         <p>
-          We evaluate <strong>BifrostUMI</strong> on real-world humanoid manipulation tasks using a <strong>Unitree G1</strong> robot. The experiments test whether robot-free VR-UMI demonstrations can become deployable policies, whether sparse keypoints can coordinate hands, feet, and waist, and whether robot-free collection improves data throughput over teleoperation.
+          We evaluate <strong>HumanoidUMI</strong> on real-world humanoid manipulation tasks using a <strong>Unitree G1</strong> robot. The experiments test whether robot-free VR-UMI demonstrations can become deployable policies, whether sparse keypoints can coordinate hands, feet, and waist, and whether robot-free collection improves data throughput over teleoperation.
         </p>
       </div>
 
@@ -432,7 +430,7 @@
              class="system-design-image is-wide">
         <div class="content is-medium experiment-caption">
           <p>
-            <strong>Robot-free demonstrations transfer to deployable manipulation skills.</strong> BifrostUMI is evaluated on cluttered tabletop pick-and-place, bimanual vegetable collection, and dynamic ball-shooting. These tasks cover single-arm visual grasping, coordinated bimanual manipulation, and precisely timed dynamic release.
+            <strong>Robot-free demonstrations transfer to deployable manipulation skills.</strong> HumanoidUMI is evaluated on cluttered tabletop pick-and-place, bimanual vegetable collection, and dynamic ball-shooting. These tasks cover single-arm visual grasping, coordinated bimanual manipulation, and precisely timed dynamic release.
           </p>
           <p>
             The full pipeline consistently outperforms ablated variants. Replacing Spatial Keypoint Retargeting with GMR reduces success on the manipulation tasks, while removing latency matching hurts dynamic shooting, showing that spatially grounded retargeting and synchronized sensing-control timing are both critical.
@@ -465,14 +463,14 @@
   <div class="container is-max-desktop content has-text-centered">
     <h2 class="title">BibTeX</h2>
     
-    <pre style="text-align: left;"><code>@misc{wang2026bifrostumibridgingrobotfreedemonstrations,
-      title={BifrostUMI: Bridging Robot-Free Demonstrations and Humanoid Whole-Body Manipulation}, 
+    <pre style="text-align: left;"><code>@misc{wang2026humanoidumibridgingrobotfreedemonstrations,
+      title={HumanoidUMI: Bridging Robot-Free Demonstrations and Humanoid Whole-Body Manipulation}, 
       author={Hongwu Wang and Chenhao Yu and Youhao Hu and Jiachen Zhang and Yuanyuan Li and Shaqi Luo},
       year={2026},
-      eprint={2605.03452},
+      eprint={2606.27239},
       archivePrefix={arXiv},
       primaryClass={cs.RO},
-      url={https://arxiv.org/abs/2605.03452}, 
+      url={https://arxiv.org/abs/2606.27239}, 
     }
 </code></pre>
   </div>
