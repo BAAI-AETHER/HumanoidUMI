@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="BifrostUMI bridges robot-free human demonstrations and humanoid whole-body manipulation with portable VR-UMI data collection, sparse keypoint retargeting, and whole-body control.">
+  <meta name="keywords" content="BifrostUMI, Humanoid Robot, Robot-Free Data Collection, Whole-Body Manipulation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BifrostUMI</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B34V641Z6X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-B34V641Z6X');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css?v=20260618-2">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js?v=20260618-2"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+            <span class="publication-title-line">BifrostUMI: Bridging Robot-Free Demonstrations <br>
+                                                  and Humanoid Whole-Body Manipulation
+            </span>
+          </h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://hongwuwow.github.io/">Hongwu Wang</a><sup>†</sup>,</span>
+            <span class="author-block">
+              <a href="https://github.com/zuraron">Chenhao Yu</a><sup>†</sup>,</span>
+            <span class="author-block">
+              <a href="https://starlitxiling.github.io">Youhao Hu</a><sup>†</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://github.com/zgates2">Jiachen Zhang</a>,
+            </span>
+
+            <br>
+
+            <span class="author-block">
+              <a href="https://github.com/Yuanyuan-Lee">Yuanyuan Li</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://luoshaqi.github.io/">Shaqi Luo</a><sup>*</sup>
+            </span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2605.03452" class="external-link button is-normal is-rounded is-dark" title="View pdf">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                 <a href="https://arxiv.org/abs/2605.03452" class="external-link button is-normal is-rounded is-dark" title="View on arXiv">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code(Coming Soon)</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-widescreen">
+
+    <!-- 标题（单行） -->
+    <h2 class="title is-2 has-text-centered">
+      Experiment Results
+    </h2>
+
+    <div class="task-video-shell">
+      <div class="task-tabs" role="tablist" aria-label="Experiment result videos">
+        <button class="task-tab is-active"
+                type="button"
+                role="tab"
+                aria-selected="true"
+                data-video-src="./static/videos/BifrostUMI_bread.mov"
+                data-video-title="Cluttered tabletop pick-and-place">
+          Cluttered tabletop pick-and-place
+        </button>
+        <button class="task-tab"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                data-video-src="./static/videos/BifrostUMI_bimanual.mov"
+                data-video-title="Bimanual vegetable collection">
+          Bimanual vegetable collection
+        </button>
+        <button class="task-tab"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                data-video-src="./static/videos/BifrostUMI_shooting.mov"
+                data-video-title="Dynamic ball-shooting">
+          Dynamic ball-shooting
+        </button>
+        <button class="task-tab"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                data-video-src="./static/videos/BifrostUMI_bentover.mov"
+                data-video-title="Under-table waste disposal">
+          Under-table waste disposal
+        </button>
+        <button class="task-tab"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                data-video-src="./static/videos/BifrostUMI_walk.mov"
+                data-video-title="Walking coffee delivery">
+          Walking coffee delivery
+        </button>
+      </div>
+
+      <div class="has-text-centered">
+        <video id="task-result-video"
+               autoplay
+               loop
+               muted
+               playsinline
+               src="./static/videos/BifrostUMI_bread.mov"
+               class="result-video"></video>
+        <p id="task-video-caption" class="video-caption">Cluttered tabletop pick-and-place</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">A Robot-Free Bridge to Humanoid Whole-Body Skills</h2>
+        <div class="content has-text-justified">
+          <p>
+            BifrostUMI provides a robot-free data collection and learning framework for humanoid whole-body skills. Human demonstrations are collected with portable VR-UMI devices and represented as sparse task-relevant spatial keypoints. A high-level policy predicts future keypoint motions and gripper actions, Spatial Keypoint Retargeting converts them into feasible humanoid whole-body references, and a low-level whole-body controller executes the motion with balance and stability.
+          </p>
+          <img src="./static/images/BifrostUMI_main.png"
+                alt="BifrostUMI overview"
+                class="media-frame">
+          <p class="figure-caption">
+            Overview of the full BifrostUMI pipeline, from robot-free human demonstration capture to deployable humanoid whole-body execution.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            High-quality data collection is a fundamental cornerstone for training humanoid whole-body visuomotor policies. Current data acquisition paradigms predominantly rely on robot teleoperation, which is often hindered by limited hardware accessibility and low operational efficiency. Inspired by the Universal Manipulation Interface (UMI), we propose BifrostUMI, a portable, efficient, and robot-free data collection framework tailored for humanoid robots. BifrostUMI leverages lightweight VR devices to capture human demonstrations as sparse keypoint trajectories while simultaneously recording wrist-mounted visual data. These multimodal data are subsequently utilized to train a high-level policy network that predicts future keypoint trajectories conditioned on the captured visual features. Through a robust keypoint retargeting pipeline, keypoint trajectories are precisely mapped onto the robot's morphology and executed via a whole-body controller. This approach enables the seamless transfer of diverse and agile behaviors from natural human demonstrations to humanoid embodiments. We demonstrate the efficacy and versatility of the proposed framework across five real-world scenarios.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-widescreen">
+    <div class="system-design-shell">
+
+      <div class="section-heading-shell">
+        <h2 class="title is-2">Hardware: Robot-Free Data Acquisition</h2>
+      </div>
+
+      <div class="has-text-centered">
+        <img src="./static/images/hardware.png"
+             alt="Hardware setup"
+             class="system-design-image">
+      </div>
+
+      <div class="content is-medium">
+        <p>
+          The data acquisition platform combines a Pico 4-based motion capture setup — two foot-mounted trackers and one waist-mounted tracker — with two instrumented grippers, each carrying a fisheye camera.
+        </p>
+
+        <p>The system synchronously records three multimodal streams:</p>
+
+        <ul>
+          <li><strong>Wrist-view images</strong> from the fisheye cameras on each gripper.</li>
+          <li><strong>Whole-body keypoint states</strong> obtained via the Pico SDK and aligned to the robot frame.</li>
+          <li><strong>Gripper aperture</strong> measured directly from the motor's magnetic encoder.</li>
+        </ul>
+
+        <p>
+          These heterogeneous streams are jointly used to train the high-level policy and, at deployment, to drive the robot in real time — without ever requiring access to the physical humanoid during data collection.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-widescreen">
+    <div class="system-design-shell">
+
+      <div class="section-heading-shell">
+        <h2 class="title is-2">Method Overview</h2>
+      </div>
+
+      <div class="has-text-centered">
+        <img src="./static/images/method.png"
+             alt="Method overview"
+             class="system-design-image">
+      </div>
+
+      <div class="content is-medium">
+
+        <p>
+          BifrostUMI formulates humanoid visuomotor control as a <strong>three-stage hierarchy</strong>:
+        </p>
+
+        <ol>
+          <li>
+            <strong>High-level policy:</strong>
+            A diffusion-based policy infers task-space keypoint trajectories and gripper commands from wrist-view images and partial proprioception.
+          </li>
+
+          <li>
+            <strong>Spatial Keypoint Retargeting (SKR):</strong>
+            Maps these commands to a robot-native 36-dimensional motion representation — root position, root orientation, and 29 joint angles.
+          </li>
+
+          <li>
+            <strong>Low-level controller:</strong>
+            A whole-body controller tracks the retargeted motion using proprioceptive feedback, enabling stable humanoid execution from robot-free demonstrations.
+          </li>
+        </ol>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-widescreen">
+    <div class="system-design-shell">
+
+      <div class="section-heading-shell">
+        <h2 class="title is-2">High-Level Diffusion Policy</h2>
+      </div>
+
+      <div class="has-text-centered">
+        <img src="./static/images/highlevel.png"
+             alt="High-level diffusion policy"
+             class="system-design-image is-narrow">
+      </div>
+
+      <div class="content is-medium">
+
+        <p>
+          We instantiate the high-level policy as a <strong>whole-body extension of Diffusion Policy</strong> that operates on a <strong>sparse task-space</strong> rather than the full joint configuration.
+        </p>
+
+        <ul>
+
+          <li>
+            <strong>Observation:</strong>
+            Left/right wrist-view RGB images are encoded by <strong>DINOv2</strong> and fused with a 15-dimensional lower-body proprioceptive state and the diffusion step into a single global condition.
+          </li>
+
+          <li>
+            <strong>Action (47-D):</strong>
+            Five keypoints — pelvis, left/right TCP, and left/right foot — each represented as a 3-D translation and a 6-D continuous rotation, plus two scalar gripper widths.
+          </li>
+
+          <li>
+            <strong>Temporal structure:</strong>
+            At each step, the policy predicts a <strong>receding-horizon chunk</strong> of length <strong>H = 48</strong>. Supervision targets are encoded in each keypoint's own local frame, removing dependence on the world frame at recording time and improving cross-episode generalization.
+          </li>
+
+        </ul>
+
+        <p>
+          At inference, the <strong>denoised, normalized chunk</strong> is converted back to absolute SE(3) targets and forwarded to <strong>SKR</strong> for whole-body retargeting.
+        </p>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-widescreen">
+    <div class="system-design-shell">
+
+      <div class="section-heading-shell">
+        <h2 class="title is-2">SKR: Preserving Metric Spatial Structure Across Embodiments</h2>
+      </div>
+
+      <div class="has-text-centered">
+        <img src="./static/images/ik.png"
+             alt="Spatial Keypoint Retargeting"
+             class="system-design-image is-narrow">
+      </div>
+
+      <div class="content is-medium">
+
+        <p>
+          In robot-free settings, conventional retargeting methods (e.g., GMR) apply global or local rescaling to bridge the human–robot embodiment gap, which often <strong>distorts metric spatial information</strong> in the demonstration.
+        </p>
+
+        <p>
+          <strong>Spatial Keypoint Retargeting (SKR)</strong> takes a different route: it represents motion using <strong>five task-relevant keypoints</strong> — pelvis, left/right TCP, and left/right foot — and only scales the <strong>vertical pelvis-to-foot distance</strong> to compensate for height differences.
+        </p>
+
+        <p>
+          All other <strong>metric spatial relationships are preserved</strong>, allowing the retargeted motion to maintain the <strong>geometric structure</strong> of the original demonstration.
+        </p>
+
+        <p>
+          SKR also serves as the <strong>closed-loop interface</strong> between the high-level policy and the low-level controller:
+        </p>
+
+        <ul>
+          <li>
+            <strong>State estimation:</strong>
+            Joint states are read from the <strong>Unitree SDK</strong>, and forward kinematics is performed with the pelvis as the reference frame to compute current keypoint poses.
+          </li>
+
+          <li>
+            <strong>Target construction:</strong>
+            The current state is combined with high-level predictions to form desired keypoint targets.
+          </li>
+
+          <li>
+            <strong>Inverse kinematics:</strong>
+            The system solves a whole-body IK problem using <strong>mink</strong> (a MuJoCo-based solver) to produce joint-level commands.
+          </li>
+
+          <li>
+            <strong>Control loop:</strong>
+            This process runs at every control step, forming a continuous closed-loop execution.
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-widescreen">
+    <div class="system-design-shell">
+
+      <div class="section-heading-shell">
+        <h2 class="title is-2">Experiments</h2>
+      </div>
+
+      <div class="content is-medium">
+        <p>
+          We evaluate <strong>BifrostUMI</strong> on real-world humanoid manipulation tasks using a <strong>Unitree G1</strong> robot. The experiments test whether robot-free VR-UMI demonstrations can become deployable policies, whether sparse keypoints can coordinate hands, feet, and waist, and whether robot-free collection improves data throughput over teleoperation.
+        </p>
+      </div>
+
+      <div class="experiment-figure-block">
+        <img src="./static/images/exp1.png"
+             alt="Real-world evaluation and ablation analysis on three humanoid manipulation tasks"
+             class="system-design-image is-wide">
+        <div class="content is-medium experiment-caption">
+          <p>
+            <strong>Robot-free demonstrations transfer to deployable manipulation skills.</strong> BifrostUMI is evaluated on cluttered tabletop pick-and-place, bimanual vegetable collection, and dynamic ball-shooting. These tasks cover single-arm visual grasping, coordinated bimanual manipulation, and precisely timed dynamic release.
+          </p>
+          <p>
+            The full pipeline consistently outperforms ablated variants. Replacing Spatial Keypoint Retargeting with GMR reduces success on the manipulation tasks, while removing latency matching hurts dynamic shooting, showing that spatially grounded retargeting and synchronized sensing-control timing are both critical.
+          </p>
+        </div>
+      </div>
+
+      <div class="experiment-figure-block">
+        <img src="./static/images/exp2.png"
+             alt="Real-world whole-body evaluation and knee-keypoint ablation"
+             class="system-design-image is-wide">
+        <div class="content is-medium experiment-caption">
+          <p>
+            <strong>Sparse keypoints support whole-body coordination.</strong> Under-table waste disposal requires grasping, stepping backward, knee and torso bending, and reaching into a constrained workspace. Walking coffee delivery requires forward locomotion, stable stopping, and handover.
+          </p>
+          <p>
+            The knee-keypoint ablation shows that lower-body keypoints are important when waist-leg coordination is substantial. Without them, lower-body posture is underconstrained, reducing the reliability of body lowering, stepping, and stable reaching.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content has-text-centered">
+    <h2 class="title">BibTeX</h2>
+    
+    <pre style="text-align: left;"><code>@misc{wang2026bifrostumibridgingrobotfreedemonstrations,
+      title={BifrostUMI: Bridging Robot-Free Demonstrations and Humanoid Whole-Body Manipulation}, 
+      author={Hongwu Wang and Chenhao Yu and Youhao Hu and Jiachen Zhang and Yuanyuan Li and Shaqi Luo},
+      year={2026},
+      eprint={2605.03452},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2605.03452}, 
+    }
+</code></pre>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop content has-text-centered">
+    <h2 class="title is-2">Join Us</h2>
+    <p style="font-size: 1.1rem;">
+      We are looking for passionate and self-motivated students to join us!<br>
+      Our research focuses on Vision-Language-Action (VLA) and Whole-Body Control (WBC).<br>
+      Internship and research collaboration opportunities are available.
+    </p>
+    <p style="font-size: 1.25rem; font-weight: 500;">
+      📬 Send your resume to: <a href="mailto:luoshaqi@163.com">luoshaqi@163.com</a>
+    </p>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Website template modified from <a
+              href="https://nerfies.github.io/">NeRFies</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
